@@ -15,15 +15,22 @@ module.exports = {
 		static: "./dist",
 	},
 	resolve: {
-		extensions: [".js", ".jsx"],
+		extensions: [".js", ".jsx", ".ts", ".tsx"],
 	},
 	module: {
 		rules: [
 			{
-				test: /\.(js|jsx)$/,
+				test: /\.(js|jsx)?$/,
 				exclude: /node_modules/,
 				use: {
 					loader: "babel-loader",
+				},
+			},
+			{
+				test: /\.(ts|tsx)?$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "ts-loader",
 				},
 			},
 			{

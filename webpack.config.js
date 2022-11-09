@@ -16,7 +16,6 @@ module.exports = {
 	},
 	resolve: {
 		extensions: [".js", ".jsx", ".ts", ".tsx"],
-		
 	},
 	module: {
 		rules: [
@@ -29,7 +28,7 @@ module.exports = {
 			},
 			{
 				test: /\.(css)$/,
-				use: ["style-loader"],
+				use: ["style-loader", "css-loader"],
 			},
 			{
 				test: /\.s[ac]ss$/i,
